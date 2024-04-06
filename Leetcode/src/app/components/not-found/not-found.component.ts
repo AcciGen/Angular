@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'app-not-found',
   standalone: true,
   imports: [RouterLink, RouterLinkActive],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  templateUrl: './not-found.component.html',
+  styleUrl: './not-found.component.scss'
 })
-export class NavbarComponent {
+export class NotFoundComponent {
   
 }

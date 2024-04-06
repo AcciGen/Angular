@@ -1,16 +1,11 @@
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { NgModule } from '@angular/core';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 export const routes: Routes = [
-    { path: 'home', title: 'home', component: HomeComponent },
-    { path: 'profile', title: 'profile', component: ProfileComponent }
+    { path: 'home', title: 'Leetcode', component: HomeComponent },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: 'profile', title: 'Profile', component: ProfileComponent },
+    { path: '**', title: '404 Not Found', component: NotFoundComponent }
 ];
-
-@NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
-})
-
-export class AppRoutingModule { }
