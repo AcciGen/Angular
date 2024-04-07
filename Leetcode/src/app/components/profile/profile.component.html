@@ -1,26 +1,66 @@
-<div class="container">
-    <div class="profile">
-        <h1>LeetCode Profile</h1>
-        <p>Username: coolcoder123</p>
-        <div class="stats">
-            <div class="stat">
-                <div class="value">250</div>
-                <div class="label">Problems Solved</div>
-            </div>
-            <div class="stat">
-                <div class="value">85%</div>
-                <div class="label">Accuracy</div>
-            </div>
-            <div class="stat">
-                <div class="value">Level 7</div>
-                <div class="label">Rank</div>
+<div class="body">
+    <header class="header">
+        <div class="header-content">
+            <a routerLink="/home" routerLinkActive="active" 
+                [routerLinkActiveOptions]="{exact: true}" ariaCurrentWhenActive="page" class="logo-container">
+                <img src="assets/leetcode_logo.svg" alt="LeetCode Logo">
+            </a>
+            <div class="profile-container">
+                <img src="assets/profile_photo.jpg" alt="Profile Photo" class="avatar">
+                <div class="profile-info">
+                    <h2 class="username">AcciGen</h2>
+                    <p class="stats">Total Problems Solved: 80</p>
+                    <p class="stats">Accepted Submissions: 80</p>
+                    <p class="stats">Submission Rate: 80%</p>
+                </div>
             </div>
         </div>
-        <p>Recent Activity:</p>
-        <ul>
-            <li>Solved problem: Two Sum</li>
-            <li>Solved problem: Longest Substring Without Repeating Characters</li>
-            <li>Attempted problem: Median of Two Sorted Arrays</li>
-        </ul>
-    </div>
+    </header>
+    <main class="main">
+        <section class="recent-activity">
+            <h2>Recent Activity</h2>
+            <ul>
+                <li>Solved problem "Two Sum" - Easy</li>
+                <li>Solved problem "Reverse Integer" - Easy</li>
+                <li>Submitted solution for problem "Add Two Numbers" - Medium</li>
+                <li>Started working on problem "Longest Substring Without Repeating Characters" - Medium</li>
+            </ul>
+        </section>
+        <section class="favorite-problems">
+            <h2>Favorite Problems</h2>
+            <div class="problem">
+                <h3>Two Sum</h3>
+                <p>Easy</p>
+                <p>Tags: Array, Hash Table</p>
+            </div>
+            <div class="problem">
+                <h3>Reverse Integer</h3>
+                <p>Easy</p>
+                <p>Tags: Math</p>
+            </div>
+            <div class="problem">
+                <h3>Add Two Numbers</h3>
+                <p>Medium</p>
+                <p>Tags: Linked List, Math</p>
+            </div>
+            <div class="problem">
+                <h3>Longest Substring Without Repeating Characters</h3>
+                <p>Medium</p>
+                <p>Tags: Hash Table, Two Pointers, String, Sliding Window</p>
+            </div>
+        </section>
+        <section class="leaderboard">
+            <h2>Leaderboard</h2>
+            <ol>
+                <li>JaneSmith - 101 solved</li>
+                <li>EmilyGreen - 92 solved</li>
+                <li>AcciGen - 80 solved</li>
+                <li>AliceBrown - 68 solved</li>
+                <li>BobJohnson - 52 solved</li>
+            </ol>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="link">Connect with me on <a href="https://leetcode.com/AcciGen">LeetCode</a></p>
+    </footer>
 </div>
