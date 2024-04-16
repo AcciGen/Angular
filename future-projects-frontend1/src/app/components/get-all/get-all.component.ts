@@ -8,20 +8,19 @@ import { User } from '../../models/user';
   styleUrl: './get-all.component.scss'
 })
 export class GetAllComponent implements OnInit {
+  displayedColumns: string[] = ['id', 'name', 'email', 'role'];
+  dataSource: User[] = [];
 
-  users!: User[];
-  constructor(private crudService: CrudService){}
+  constructor(private crudService: CrudService) { }
 
-ngOnInit(): void {
-  this.getAllUsers();
-}
+  ngOnInit(): void {
+    this.getAllUsers();
+  }
 
   getAllUsers() {
     this.crudService.getAll().subscribe({
-      next: (data) => {
-        this.users = data;
-
-        console.log(data);
+      next: (data: User[]) => {
+        this.dataSource = data;
       },
       error: (err) => {
         console.log(err);

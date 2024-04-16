@@ -19,7 +19,7 @@ import {MatTableModule} from '@angular/material/table';
     AppRoutingModule,
     RouterModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
   ],
   providers: [
     provideAnimationsAsync()
