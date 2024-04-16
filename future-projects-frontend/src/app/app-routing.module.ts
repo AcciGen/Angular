@@ -7,8 +7,8 @@ import { UpdateComponent } from './components/update/update.component';
 import { DeleteComponent } from './components/delete/delete.component';
 
 const routes: Routes = [
-  { path: 'home', redirectTo: 'getall', pathMatch: 'full' },
   { path: '', redirectTo: 'getall', pathMatch: 'full' },
+  { path: 'home', redirectTo: 'getall', pathMatch: 'full' },
   { path: 'getall', title: 'Get All', component: GetAllComponent },
   { path: 'getbyid', title: 'Get By Id', component: GetByIdComponent },
   { path: 'create', title: 'Create', component: CreateComponent },
