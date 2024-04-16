@@ -1,1 +1,22 @@
-<p>get-all works!</p>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Role</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    @for(user of users; track user.id){
+        <tr>
+          <th scope="row">{{user.id}}</th>
+          <td>{{user.name}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.role}}</td>
+        </tr>
+    }
+      
+    </tbody>
+  </table>
