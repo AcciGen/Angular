@@ -1,7 +1,6 @@
 <p-table [value]="users" [tableStyle]="{ 'min-width': '50rem' }">
     <ng-template pTemplate="header">
         <tr>
-            <th>Id</th>
             <th>Name</th>
             <th>Email</th>
             <th>Role</th>
@@ -9,7 +8,6 @@
     </ng-template>
     <ng-template pTemplate="body" let-user>
         <tr>
-            <td>{{ user.id }}</td>
             <td>{{ user.name }}</td>
             <td>{{ user.email }}</td>
             <td>{{ user.role }}</td>
