@@ -9,9 +9,9 @@
     </thead>
     <tbody>
     
-    @for(user of users; track user.id){
+    @for(user of users; track user.id; let i = $index){
         <tr>
-          <th scope="row">{{user.id}}</th>
+          <th scope="row">{{ i + 1 }}</th>
           <td>{{user.name}}</td>
           <td>{{user.email}}</td>
           <td>{{user.role}}</td>
