@@ -19,3 +19,6 @@
 
 # PrimeNG Create With API
 ![primeNG-create](https://github.com/AcciGen/Angular/assets/145344775/8c005b61-1cef-4ab3-aaa4-c8b237ad5bf0)
+
+# NG Bootstrap Create With API
+![NGBootstrap-create](https://github.com/AcciGen/Angular/assets/145344775/9b78927c-dbd4-48c5-85a1-75046b5f74f6)
