@@ -17,3 +17,5 @@
 # Angular Material Create With API
 ![Angular-create](https://github.com/AcciGen/Angular/assets/145344775/343065b2-4674-4a1e-ba07-4fe1a9c6df92)
 
+# PrimeNG Create With API
+![primeNG-create](https://github.com/AcciGen/Angular/assets/145344775/8c005b61-1cef-4ab3-aaa4-c8b237ad5bf0)
