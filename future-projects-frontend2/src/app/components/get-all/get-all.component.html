@@ -7,14 +7,12 @@
             <th>Role</th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-product>
-        @for(user of users; track user.id; let i = $index){
-            <tr>
-                <td>{{ i + 1 }}</td>
-                <td>{{ user.name }}</td>
-                <td>{{ user.email }}</td>
-                <td>{{ user.role }}</td>
-            </tr>
-        }
+    <ng-template pTemplate="body" let-user>
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.role }}</td>
+        </tr>
     </ng-template>
 </p-table>
