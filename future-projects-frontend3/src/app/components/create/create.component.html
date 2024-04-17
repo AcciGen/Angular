@@ -1,0 +1,24 @@
+<form (ngSubmit)="setUser()" #createForm="ngForm" class="my-4">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="setValue.name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" name="email" [(ngModel)]="setValue.email" required>
+    </div>
+    <div class="form-group">
+      <label for="login">Login</label>
+      <input type="text" class="form-control" id="login" name="login" [(ngModel)]="setValue.login" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="setValue.password" required>
+    </div>
+    <div class="form-group">
+      <label for="role">Role</label>
+      <input type="text" class="form-control" id="role" name="role" [(ngModel)]="setValue.role" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Create User</button>
+  </form>
+  
