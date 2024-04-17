@@ -1,0 +1,30 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="form-fields">
+        <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Login</mat-label>
+            <input matInput formControlName="login">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Role</mat-label>
+            <input matInput formControlName="role">
+        </mat-form-field>
+    </div>
+    
+    <button mat-raised-button type="submit" color="primary">Submit</button>
+</form>
