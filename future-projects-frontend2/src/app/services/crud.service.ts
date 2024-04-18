@@ -14,10 +14,10 @@ export class CrudService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<User[]> {
-    return this.http.get<User[]>(this.baseUrl + "GetAll");
+    return this.http.get<User[]>(this.baseUrl);
   }
 
   create(data: CreateUser): Observable<CreateUser> {
-    return this.http.post<CreateUser>(this.baseUrl + "Create", data)
+    return this.http.post<CreateUser>(this.baseUrl, data)
   }
 }

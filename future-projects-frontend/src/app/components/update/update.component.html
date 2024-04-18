@@ -1,1 +1,38 @@
-<p>update works!</p>
+<form class="submit-form">
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" placeholder="<<ID>>" [(ngModel)]="myId" name="id" required>
+            <div style="padding-top: 10px;">
+                <button class="btn btn-success" (click)="getById()">Find User</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="<<Name>>" value="{{user.name}}" [(ngModel)]="user.name" name="name" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="<<Email>>" value="{{user.email}}" [(ngModel)]="user.email" name="email" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="login">Login</label>
+            <input type="text" class="form-control" id="login" placeholder="<<Login>>" value="{{user.login}}" [(ngModel)]="user.login" name="login" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="<<Password>>" value="{{user.password}}" [(ngModel)]="user.password" name="password" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="role">Role</label>
+            <input type="text" class="form-control" id="role" placeholder="<<Role>>" value="{{user.role}}" [(ngModel)]="user.role" name="role" required>
+        </div>
+    
+        <div style="padding-top: 10px;">
+            <button type="submit" class="btn btn-primary" (click)="setUser()">Update User</button>
+        </div>
+</form>

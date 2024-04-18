@@ -9,15 +9,27 @@ import { CreateUser } from '../models/create-user';
 })
 export class CrudService {
 
-  baseUrl: string = "https://localhost:7226/api/User/"
+  baseUrl: string = "https://localhost:7226/api/User"
 
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<User[]> {
-    return this.http.get<User[]>(this.baseUrl + "GetAll");
+    return this.http.get<User[]>(this.baseUrl);
   }
 
   create(data: CreateUser): Observable<CreateUser> {
-    return this.http.post<CreateUser>(this.baseUrl + "Create", data)
+    return this.http.post<CreateUser>(this.baseUrl, data);
+  }
+
+  getById(id: number): Observable<CreateUser> {
+    return this.http.get<CreateUser>(this.baseUrl + `/GetById?id=${id}`);
+  }
+
+  update(id: number, data: CreateUser): Observable<CreateUser> {
+    return this.http.put<CreateUser>(this.baseUrl + `/${id}`, data);
+  }
+
+  delete(id: number): Observable<boolean> {
+    return this.http.delete<boolean>(this.baseUrl + `/${id}`);
   }
 }
