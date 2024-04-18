@@ -14,12 +14,13 @@ import { CreateComponent } from './components/create/create.component';
 import { UpdateComponent } from './components/update/update.component';
 import { DeleteComponent } from './components/delete/delete.component';
 import { MatOption } from '@angular/material/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormField } from '@angular/material/form-field';
 import { MatSelect, MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { GetByIdComponent } from './components/get-by-id/get-by-id.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     NavbarComponent,
     CreateComponent,
     UpdateComponent,
-    DeleteComponent
+    DeleteComponent,
+    GetByIdComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatSelectModule,
     MatButtonModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule
   ],
   providers: [
     provideAnimationsAsync()
