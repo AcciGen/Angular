@@ -75,6 +75,13 @@ export const appRoutes: Route[] = [
         },
         children: [
             {path: 'example', loadChildren: () => import('app/modules/admin/example/example.routes')},
+            {path: 'academy', loadChildren: () => import('app/modules/admin/academy/academy.routes')},
+            {path: 'pricing', children: [
+                {path: 'modern', loadChildren: () => import('app/modules/admin/pricing/modern/modern.routes')},
+                {path: 'simple', loadChildren: () => import('app/modules/admin/pricing/simple/simple.routes')},
+                {path: 'single', loadChildren: () => import('app/modules/admin/pricing/single/single.routes')},
+                {path: 'table', loadChildren: () => import('app/modules/admin/pricing/table/table.routes')}
+            ]},
         ]
     }
 ];

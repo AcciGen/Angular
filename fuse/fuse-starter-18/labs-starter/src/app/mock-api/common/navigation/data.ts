@@ -8,6 +8,45 @@ export const defaultNavigation: FuseNavigationItem[] = [
         type : 'basic',
         icon : 'heroicons_outline:chart-pie',
         link : '/example'
+    },
+    {
+        id   : 'academy',
+        title: 'Academy',
+        type : 'basic',
+        icon : 'heroicons_outline:academic-cap',
+        link : '/academy'
+    },
+    {
+        id      : 'pricing',
+        title   : 'Pricing',
+        type    : 'collapsable',
+        icon    : 'heroicons_outline:banknotes',
+        children: [
+            {
+                id   : 'pricing.modern',
+                title: 'Modern',
+                type : 'basic',
+                link : '/pricing/modern',
+            },
+            {
+                id   : 'pricing.simple',
+                title: 'Simple',
+                type : 'basic',
+                link : '/pricing/simple',
+            },
+            {
+                id   : 'pricing.single',
+                title: 'Single',
+                type : 'basic',
+                link : '/pricing/single',
+            },
+            {
+                id   : 'pricing.table',
+                title: 'Table',
+                type : 'basic',
+                link : '/pricing/table',
+            },
+        ],
     }
 ];
 export const compactNavigation: FuseNavigationItem[] = [
@@ -17,6 +56,45 @@ export const compactNavigation: FuseNavigationItem[] = [
         type : 'basic',
         icon : 'heroicons_outline:chart-pie',
         link : '/example'
+    },
+    {
+        id   : 'academy',
+        title: 'Academy',
+        type : 'basic',
+        icon : 'heroicons_outline:academic-cap',
+        link : '/academy'
+    },
+    {
+        id      : 'pricing',
+        title   : 'Pricing',
+        type    : 'collapsable',
+        icon    : 'heroicons_outline:banknotes',
+        children: [
+            {
+                id   : 'pricing.modern',
+                title: 'Modern',
+                type : 'basic',
+                link : '/pricing/modern',
+            },
+            {
+                id   : 'pricing.simple',
+                title: 'Simple',
+                type : 'basic',
+                link : '/pricing/simple',
+            },
+            {
+                id   : 'pricing.single',
+                title: 'Single',
+                type : 'basic',
+                link : '/pricing/single',
+            },
+            {
+                id   : 'pricing.table',
+                title: 'Table',
+                type : 'basic',
+                link : '/pricing/table',
+            },
+        ],
     }
 ];
 export const futuristicNavigation: FuseNavigationItem[] = [
@@ -26,6 +104,45 @@ export const futuristicNavigation: FuseNavigationItem[] = [
         type : 'basic',
         icon : 'heroicons_outline:chart-pie',
         link : '/example'
+    },
+    {
+        id   : 'academy',
+        title: 'Academy',
+        type : 'basic',
+        icon : 'heroicons_outline:academic-cap',
+        link : '/academy'
+    },
+    {
+        id      : 'pricing',
+        title   : 'Pricing',
+        type    : 'collapsable',
+        icon    : 'heroicons_outline:banknotes',
+        children: [
+            {
+                id   : 'pricing.modern',
+                title: 'Modern',
+                type : 'basic',
+                link : '/pricing/modern',
+            },
+            {
+                id   : 'pricing.simple',
+                title: 'Simple',
+                type : 'basic',
+                link : '/pricing/simple',
+            },
+            {
+                id   : 'pricing.single',
+                title: 'Single',
+                type : 'basic',
+                link : '/pricing/single',
+            },
+            {
+                id   : 'pricing.table',
+                title: 'Table',
+                type : 'basic',
+                link : '/pricing/table',
+            },
+        ],
     }
 ];
 export const horizontalNavigation: FuseNavigationItem[] = [
@@ -35,5 +152,44 @@ export const horizontalNavigation: FuseNavigationItem[] = [
         type : 'basic',
         icon : 'heroicons_outline:chart-pie',
         link : '/example'
+    },
+    {
+        id   : 'academy',
+        title: 'Academy',
+        type : 'basic',
+        icon : 'heroicons_outline:academic-cap',
+        link : '/academy'
+    },
+    {
+        id      : 'pricing',
+        title   : 'Pricing',
+        type    : 'collapsable',
+        icon    : 'heroicons_outline:banknotes',
+        children: [
+            {
+                id   : 'pricing.modern',
+                title: 'Modern',
+                type : 'basic',
+                link : '/pricing/modern',
+            },
+            {
+                id   : 'pricing.simple',
+                title: 'Simple',
+                type : 'basic',
+                link : '/pricing/simple',
+            },
+            {
+                id   : 'pricing.single',
+                title: 'Single',
+                type : 'basic',
+                link : '/pricing/single',
+            },
+            {
+                id   : 'pricing.table',
+                title: 'Table',
+                type : 'basic',
+                link : '/pricing/table',
+            },
+        ],
     }
 ];
