@@ -3,21 +3,25 @@
 		<input type="checkbox" id="chk" aria-hidden="true">
 
 			<div class="signup">
-				<form>
+				<form [formGroup]="formRegister" (ngSubmit)="register()">
 					<label for="chk" aria-hidden="true">Sign up</label>
-					<input type="text" name="txt" placeholder="User name" required="">
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Password" required="">
-					<button>Sign up</button>
+					<input style="margin-top: -30px;" type="text" formControlName="fullname" placeholder="Fullname" required="">
+					<input type="text" formControlName="username" placeholder="Username" required="">
+					<input type="text" formControlName="age" placeholder="Age" required="">
+					<input type="email" formControlName="email" placeholder="Email" required="">
+					<input type="password" formControlName="password" placeholder="Password" required="">
+					<input type="password" formControlName="confirmPassword" placeholder="Confirm Password" required="">
+					<input type="text" formControlName="roles" placeholder="Roles" required="">
+					<button type="submit" [disabled]="!formRegister.valid">Sign up</button>
 				</form>
 			</div>
 
 			<div class="login">
-				<form [formGroup]="form" (ngSubmit)="login()">
-					<label for="chk" aria-hidden="true">Login</label>
+				<form [formGroup]="formLogin" (ngSubmit)="login()">
+					<label style="padding-bottom: 20px;" for="chk" aria-hidden="true">Login</label>
 					<input type="email" formControlName="email" placeholder="Email" required="">
 					<input type="password" formControlName="password" placeholder="Password" required="">
-					<button (click)="login()" type="submit" [disabled]="!form.valid">Login</button>
+					<button type="submit" [disabled]="!formLogin.valid">Login</button>
 				</form>
 			</div>
 	</div>

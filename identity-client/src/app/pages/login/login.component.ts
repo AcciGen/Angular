@@ -15,14 +15,16 @@ export class LoginComponent implements OnInit {
   matSnackBar = inject(MatSnackBar);
   router = inject(Router);
   hide = true;
-  form!: FormGroup;
+  formLogin!: FormGroup;
+  formRegister!: FormGroup;
   fb = inject(FormBuilder);
   authService = inject(AuthService);
   decodedToken: any | null;
   tokenKey = 'token' 
   roles: string[] = [];
+
   login(){
-    this.authService.login(this.form.value).subscribe(
+    this.authService.login(this.formLogin.value).subscribe(
       {
         next: (response) => {
           console.log(response);
@@ -65,11 +67,42 @@ export class LoginComponent implements OnInit {
       }
     )
   }
+
+  register() {
+    const rolesString: string = this.formRegister.value.roles;
+    this.roles = rolesString.split(' ').map((role: string) => role.trim());
+    this.formRegister.value.roles = this.roles;
+    // Assuming you have a method in your AuthService for registering users
+    this.authService.register(this.formRegister.value).subscribe(
+      {
+        next: (response) => {
+          console.log(response);
+        },
+        error: (err) => {
+          console.log(err);
+          this.matSnackBar.open(err.error.message, 'Close', {
+            duration: 5000,
+            horizontalPosition: 'center'
+          });
+        }
+      }
+    );
+  }
   
     ngOnInit(): void {
-      this.form = this.fb.group({
+      this.formLogin = this.fb.group({
         email: ['', [Validators.required, Validators.email]],
         password: ['', Validators.required],
       });
+
+      this.formRegister = this.fb.group({
+        fullname: ['', Validators.required],
+        username: ['', Validators.required],
+        age: ['', Validators.required],
+        email: ['', [Validators.required, Validators.email]],
+        password: ['', Validators.required],
+        confirmPassword: ['', Validators.required],
+        roles: ['', Validators.required],
+      })
     }
 }

@@ -9,7 +9,6 @@ import { MatToolbarModule  } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LoginComponent } from './pages/login/login.component';
-import { RegisterComponent } from './pages/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { RouterLink, RouterLinkActive } from '@angular/router';
@@ -23,14 +22,13 @@ import { StudentsComponent } from './admin/students/students.component';
 import { StudentDetailsComponent } from './admin/students/student-details/student-details.component';
 import { StudentProfileComponent } from './admin/students/student-profile/student-profile.component';
 import { UserProfileComponent } from './admin/users/user-profile/user-profile.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LoginComponent,
-    RegisterComponent,
     HomeComponent,
     NotFoundComponent,
     UsersComponent,
@@ -52,7 +50,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     HttpClientModule,
     MatSnackBarModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     provideAnimationsAsync(),
