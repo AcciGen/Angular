@@ -1,3 +1,9 @@
+#Login And Registration With API
+![Снимок экрана (57)](https://github.com/AcciGen/Angular/assets/145344775/b246219f-c03f-4492-84df-90f378346143)
+![Снимок экрана (58)](https://github.com/AcciGen/Angular/assets/145344775/1cf5da4e-10f0-4391-a853-8ca6517c633e)
+![Снимок экрана (59)](https://github.com/AcciGen/Angular/assets/145344775/fe9f4847-78ff-48e3-9cc2-9f371bdbfee9)
+
+
 # Bootstrap Create With API
 ![Bootstrap-create-page](https://github.com/AcciGen/Angular/assets/145344775/ed872125-65a6-42f9-97b0-a68aa8465af9)
 ![Bootstrap-create-done](https://github.com/AcciGen/Angular/assets/145344775/9149986c-fc10-4634-a002-db64ad313943)
