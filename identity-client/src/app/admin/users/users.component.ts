@@ -1,6 +1,8 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { jwtDecode } from 'jwt-decode';
+import { AuthService } from '../../services/auth.service';
+import { StudentProfileComponent } from '../students/student-profile/student-profile.component';
 
 @Component({
   selector: 'app-users',
@@ -23,5 +25,13 @@ export class UsersComponent implements OnInit {
       if(this.tokenDecoded.exp * 1000 < Date.now()){
         this.router.navigate(['/login'])
       }
+  }
+
+  currentText: string = "This is text";
+
+  items = ['test'];
+
+  addItem(newItem: string) {
+    this.items.push(newItem);
   }
 }

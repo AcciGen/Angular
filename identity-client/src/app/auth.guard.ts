@@ -18,6 +18,18 @@ export const loginGuard: CanActivateFn = (route, state) => {
   return true;
 };
 
+export const homeGuard: CanActivateFn = (route, state) => {
+  const router = inject(Router)
+
+ if(localStorage.getItem(tokenKey) != "") {
+    return true;
+ }
+  
+  console.log('navigate boldi');
+  router.navigate(['/login'])
+  return false;
+};
+
 export const usersGuard: CanActivateFn = (route, state) => {
   const router = inject(Router)
 

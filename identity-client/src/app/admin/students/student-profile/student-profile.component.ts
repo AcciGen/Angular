@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-student-profile',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './student-profile.component.scss'
 })
 export class StudentProfileComponent {
+  @Input() myText!: string;
 
+  @Output() newItemEvent = new EventEmitter<string>();
+
+  addNewItem(value: string) {
+    this.newItemEvent.emit(value);
+  }
 }

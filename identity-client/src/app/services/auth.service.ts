@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { LoginRequest } from '../interfaces/login-request';
-import { Observable, map } from 'rxjs';
+import { BehaviorSubject, Observable, map } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment.development';
 import { Router } from '@angular/router';
@@ -62,4 +62,12 @@ export class AuthService {
   
     return false;
   };
+
+  
+  private message = new BehaviorSubject("Initial message!");
+  getMessage = this.message.asObservable();
+
+  setMessage(message: string) {
+    this.message.next(message)
+  }
 }
